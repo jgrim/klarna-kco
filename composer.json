@@ -1,0 +1,22 @@
+{
+    "name": "jgrim/klarna-kco",
+    "description": "PHP SDK for restful integration of Klarna Checkout",
+    "keywords": ["klarna", "payments", "rest", "sdk"],
+    "type": "library",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Jason Grim",
+            "email": "me@jasongrim.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "jgrim/klarna-core": "^1"
+    },
+    "autoload": {
+        "psr-4": {
+            "KlarnaKco\\": "src/"
+        }
+    }
+}
