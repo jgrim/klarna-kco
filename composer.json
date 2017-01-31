@@ -14,6 +14,9 @@
         "php": ">=5.5",
         "jgrim/klarna-core": "dev-master"
     },
+    "suggest": {
+        "jgrim/klarna-order-management": "Add order management integration support."
+    },
     "autoload": {
         "psr-4": {
             "KlarnaKco\\": "src/"
