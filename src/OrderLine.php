@@ -41,14 +41,4 @@ class OrderLine extends ModelAbstract
 
         return $this;
     }
-
-    /**
-     * @param float $number
-     *
-     * @return int
-     */
-    protected function floatToInt($number)
-    {
-        return (int)($number * 100);
-    }
 }
