@@ -10,7 +10,7 @@
 namespace KlarnaKco\Traits;
 
 use ArrayIterator;
-use KlarnaKco\ShippingOption;
+use KlarnaKco\ModelAbstract;
 
 trait Collection
 {
@@ -20,11 +20,11 @@ trait Collection
     protected $items = [];
 
     /**
-     * @param ShippingOption $item
+     * @param ModelAbstract $item
      *
      * @return $this
      */
-    public function addItem(ShippingOption $item)
+    public function addItem(ModelAbstract $item)
     {
         $this->items[] = $item;
 
