@@ -61,7 +61,7 @@ class Transaction
         $transactionItems = $this->data;
 
         array_walk($transactionItems, function (&$value, $key) {
-            if ($value instanceof Arrayable) {
+            if ($value instanceof ModelAbstract) {
                 $value = $value->toArray();
             }
         });
