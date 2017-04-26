@@ -24,14 +24,22 @@ class Session extends \KlarnaCore\Resource
     /**
      * Create new session
      *
-     * @param array $data
+     * @param array|Transaction $data
      *
      * @see https://developers.klarna.com/api/#checkout-api-create-a-new-order
      *
      * @return \Psr\Http\Message\ResponseInterface
      */
-    public function create(array $data)
+    public function create($data)
     {
+        if ($data instanceof Transaction) {
+            $data = $data->toArray();
+        }
+
+        if (!is_array($data)) {
+            throw new \InvalidArgumentException('Data must be an array.');
+        }
+
         return $this->client->post('checkout/v3/orders', [
             'json' => $data
         ]);
@@ -40,15 +48,23 @@ class Session extends \KlarnaCore\Resource
     /**
      * Update session details
      *
-     * @param string $id
-     * @param array  $data
+     * @param string            $id
+     * @param array|Transaction $data
      *
      * @see https://developers.klarna.com/api/#checkout-api-update-an-order
      *
      * @return \Psr\Http\Message\ResponseInterface
      */
-    public function update($id, array $data)
+    public function update($id, $data)
     {
+        if ($data instanceof Transaction) {
+            $data = $data->toArray();
+        }
+
+        if (!is_array($data)) {
+            throw new \InvalidArgumentException('Data must be an array.');
+        }
+
         return $this->client->post(sprintf('checkout/v3/orders/%s', $id), [
             'json' => $data
         ]);
