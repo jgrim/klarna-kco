@@ -5,6 +5,6 @@
  *
  * @package KlarnaKco
  */
-class ShippingOption extends ModelAbstract
+class ShippingOption extends \KlarnaCore\ModelAbstract
 {
 }

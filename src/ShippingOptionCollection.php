@@ -1,5 +1,5 @@
 <?php namespace KlarnaKco;
 
-class ShippingOptionCollection extends CollectionAbstract {
+class ShippingOptionCollection extends \KlarnaCore\CollectionAbstract {
 
 }

@@ -1,6 +1,6 @@
 <?php namespace KlarnaKco;
 
-class ExternalPaymentMethodCollection extends CollectionAbstract
+class ExternalPaymentMethodCollection extends \KlarnaCore\CollectionAbstract
 {
 
 }

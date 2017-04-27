@@ -5,6 +5,6 @@
  *
  * @package KlarnaKco
  */
-class ExternalCheckouts extends ModelAbstract
+class ExternalCheckouts extends \KlarnaCore\ModelAbstract
 {
 }
